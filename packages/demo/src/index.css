@@ -25,16 +25,26 @@ body {
 
 .columns {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.5fr;
   gap: 1rem;
-  overflow: hidden;
+}
+
+@media (min-width: 850px) {
+  .columns {
+    grid-template-columns: 1fr 1fr 1.5fr;
+    overflow: hidden;
+  }
 }
 
 .app {
-  height: 100vh;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
-  overflow: hidden;
+}
+
+@media (min-width: 850px) {
+  .app {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 .app > div,
@@ -69,8 +79,15 @@ h2 {
   font-size: 1.5rem;
 }
 
-.editor {
-  font-size: 16px;
+@media (max-width: 849px) {
+  .editor,
+  .parse-wrapper {
+    max-height: 300px;
+  }
+
+  .renderer {
+    height: 500px;
+  }
 }
 
 .tabs {

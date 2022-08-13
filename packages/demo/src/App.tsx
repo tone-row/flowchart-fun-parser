@@ -3,7 +3,7 @@ import "highlight.js/styles/purebasic.css";
 import * as Tabs from "@radix-ui/react-tabs";
 
 import { Graph, parse } from "flowchart-fun-parser";
-import { Link, Router, useMatch } from "@tanstack/react-location";
+import { Link, useMatch } from "@tanstack/react-location";
 import { useEffect, useState } from "react";
 
 import { CytoscapeExample } from "./renderers/Cytoscape";
@@ -49,6 +49,7 @@ function App() {
           <Editor
             value={value}
             className="editor"
+            theme="vs-dark"
             onChange={(value) => value && setValue(value)}
             options={{
               fontSize: 16,
@@ -77,7 +78,7 @@ function App() {
           )}
         </section>
         <Tabs.Root value={tab} asChild>
-          <section className="two-part-section">
+          <section className="two-part-section renderer">
             <header>
               <h2>Renderer</h2>
               <Tabs.List className="tabs">
