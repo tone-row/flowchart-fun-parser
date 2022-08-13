@@ -1,0 +1,12 @@
+{
+  "name": "flowchart-fun-language",
+  "private": true,
+  "workspaces": [
+    "flowchart-fun-parser"
+  ],
+  "scripts": {
+    "build": "pnpm -F flowchart-fun-parser build",
+    "dev": "pnpm -F \"./packages/*\" --parallel dev",
+    "test": "pnpm -F flowchart-fun-parser test"
+  }
+}

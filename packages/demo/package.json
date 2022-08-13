@@ -1,0 +1,34 @@
+{
+  "name": "demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.4.5",
+    "@radix-ui/react-tabs": "^1.0.0",
+    "@tanstack/react-location": "^3.7.4",
+    "cytoscape": "^3.22.1",
+    "flowchart-fun-parser": "workspace:*",
+    "highlight.js": "^11.6.0",
+    "mermaid": "^9.1.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-flow-renderer": "^10.3.14"
+  },
+  "devDependencies": {
+    "@types/cytoscape": "^3.19.7",
+    "@types/mermaid": "^8.2.9",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.1",
+    "eslint": "^8.0.0",
+    "eslint-config-react-app": "^7.0.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.6"
+  }
+}

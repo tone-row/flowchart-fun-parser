@@ -1,0 +1,84 @@
+@import url("https://unpkg.com/tailwindcss@3.1.8/src/css/preflight.css");
+
+body {
+  margin: 0;
+}
+
+:root {
+  font-family: sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.parse-wrapper {
+  height: 100%;
+  overflow: auto;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: whitesmoke;
+  border: 1px solid #e6e6e6;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.app {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.app > div,
+.app > header {
+  padding: 1rem;
+}
+
+.app > header {
+  background-color: aliceblue;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid;
+}
+
+.two-part-section {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 0.5rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.editor {
+  font-size: 16px;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+}
+
+a[aria-selected="true"] {
+  text-decoration: underline;
+}
