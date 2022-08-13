@@ -1,8 +1,12 @@
 # flowchart fun parser
 
-Parse the flowchart syntax into a generalized graph syntax which supports nodes and edges with labels.
+Parse the flowchart-fun syntax into a generalized graph object which contains nodes and edges with labels.
 
-For those not familiar with this syntax it uses indentation to express parent-child relationships. See more: https://flowchart.fun
+For those not familiar with this syntax it uses indentation to express parent-child relationships. See it in action at https://flowchart.fun
+
+### 👉 [Check out the demos](https://flowchart-fun-parser-demos.vercel.app/)
+
+---
 
 ## Installation
 
@@ -35,7 +39,7 @@ Giving the parser its own package has the following goals:
 
 ## Language Goals
 
-Parse indentation syntax into nodes and edges with their respective labels and data attributes, create ID's for each node and edge.
+Parse indentation syntax into nodes and edges with their respective labels and data attributes [(\*\* check here)](#areas-of-exploration), create ID's for each node and edge.
 
 ## Demos
 
@@ -43,4 +47,5 @@ The demos folder shows examples of using different renderers.
 
 ## Areas of Exploration
 
+- \*\* Supporting generalized data attributes, probably in the syntax of css selectors (`[key="value"]`)
 - Creating ID's which use some portion of the label text with a number for order of appearance, so that there is more referential integrity when associating meta information with graph information.
