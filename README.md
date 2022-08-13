@@ -4,11 +4,7 @@ Parse the [flowchart-fun](https://github.com/tone-row/flowchart-fun) syntax into
 
 For those not familiar with this syntax it uses indentation to express parent-child relationships. See it in action at https://flowchart.fun
 
-<div align="center">
-
 ### [✨&nbsp; Open Interactive Demos &nbsp;✨](https://flowchart-fun-parser-demos.vercel.app/)
-  
-</div>
 
 ---
 
