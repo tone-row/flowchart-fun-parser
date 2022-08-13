@@ -1,10 +1,14 @@
 # flowchart fun parser
 
-Parse the flowchart-fun syntax into a generalized graph object which contains nodes and edges with labels.
+Parse the [flowchart-fun](https://github.com/tone-row/flowchart-fun) syntax into a graph object which contains nodes and edges with labels. 
 
 For those not familiar with this syntax it uses indentation to express parent-child relationships. See it in action at https://flowchart.fun
 
-### 👉 [Check out the demos](https://flowchart-fun-parser-demos.vercel.app/)
+<div align="center">
+
+### [✨&nbsp; Open Interactive Demos &nbsp;✨](https://flowchart-fun-parser-demos.vercel.app/)
+  
+</div>
 
 ---
 
@@ -23,10 +27,15 @@ parse(`parent
   child
     grandchild`);
 
-/* Returns
-...
+/* 
+Returns...
+{
+  "nodes": [...],
+  "edges": [...]
+}
 */
 ```
+
 
 ## Repository Goals
 
@@ -43,7 +52,7 @@ Parse indentation syntax into nodes and edges with their respective labels and d
 
 ## Demos
 
-The demos folder shows examples of using different renderers.
+The demos folder shows examples of using different renderers. [Open Interactive Demos](https://flowchart-fun-parser-demos.vercel.app/)
 
 ## Areas of Exploration
 
