@@ -5,7 +5,7 @@
     "flowchart-fun-parser"
   ],
   "scripts": {
-    "build": "pnpm -F flowchart-fun-parser build",
+    "build": "pnpm -F flowchart-fun-parser build && pnpm -F demo build",
     "dev": "pnpm -F \"./packages/*\" --parallel dev",
     "test": "pnpm -F flowchart-fun-parser test"
   }
