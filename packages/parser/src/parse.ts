@@ -1,6 +1,8 @@
-import { Edge, Graph } from "./types";
+import { Edge, Graph, Node } from "./types";
 
-export function parse(text: string): Graph {
+export type ParseOptions = { processNode?: (node: Node) => Node };
+
+export function parse(text: string, options: ParseOptions = {}): Graph {
   const lines = text.split("\n");
 
   const nodes: Graph["nodes"] = [];
@@ -67,15 +69,20 @@ export function parse(text: string): Graph {
     if (edgeLabel && !parentId) throw new Error(`Edge Label without Parent: "${edgeLabel}"`);
 
     if (nodeLabel || userSuppliedId) {
-      // Add Element for Node
-      nodes.push({
+      let node: Node = {
         id,
         lineNumber,
         label: decode(nodeLabel),
         data: {
           classes: classes && classes.split(".").filter(Boolean).join(" "),
         },
-      });
+      };
+
+      // Allow to alter node, specifically data on instantiation
+      if (options.processNode) node = options.processNode(node);
+
+      // Add Element for Node
+      nodes.push(node);
       if (nodeIds.includes(id)) throw new Error(`Duplicate ID: ${id}`);
       nodeIds.push(id);
       nodeLabels[nodeLabel] = id;

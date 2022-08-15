@@ -82,6 +82,7 @@ h2 {
 @media (max-width: 849px) {
   .editor,
   .parse-wrapper {
+    min-height: 300px;
     max-height: 300px;
   }
 

@@ -267,4 +267,15 @@ describe("parse", () => {
       target: "N14e",
     });
   });
+
+  test("can augment individual nodes while parsing", () => {
+    const result = parse(`a\nb`, {
+      processNode: (node) => ({
+        ...node,
+        label: node.label + " hello world",
+      }),
+    });
+    expect(result.nodes[0].label).toEqual("a hello world");
+    expect(result.nodes[1].label).toEqual("b hello world");
+  });
 });
